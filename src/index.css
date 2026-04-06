@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+:root {
+  --cream: #f5f0e8;
+  --ink: #1a1208;
+  --warm-dark: #2c1f0e;
+  --gold: #c8932a;
+  --gold-light: #e8b84b;
+  --coral: #e05c3a;
+  --sage: #4a6741;
+  --sage-light: #7a9e6f;
+  --card-bg: #fffdf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--cream);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--gold-light) 35%, transparent);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: 'Playfair Display';
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow:
+      0 18px 38px rgba(26, 18, 8, 0.12),
+      0 8px 18px rgba(26, 18, 8, 0.08);
+  }
+  .shadow-soft-hover {
+    box-shadow:
+      0 22px 46px rgba(26, 18, 8, 0.16),
+      0 10px 22px rgba(26, 18, 8, 0.1);
+  }
+}
